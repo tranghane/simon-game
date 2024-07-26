@@ -25,7 +25,7 @@ function nextSequence() {
   //get next color and put into game pattern
   randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
-  console.log(randomNumber); //testing
+//   console.log(randomNumber); //testing
 
   //flask the color on screen
   $("#" + randomChosenColour)
@@ -43,7 +43,7 @@ function nextSequence() {
 $(document).on("click", ".btn", function () {
   // Get the ID of the clicked button
   var userChosenColour = this.id;
-  console.log(userChosenColour); //test
+//   console.log(userChosenColour); //test
   userClickedPattern.push(userChosenColour);
   playSound(userChosenColour);
   animatePress(userChosenColour);
@@ -75,8 +75,8 @@ function checkAnswer(curIndex) {
   }
 }
 
-console.log(randomChosenColour);
-console.log(gamePattern);
+// console.log(randomChosenColour);
+// console.log(gamePattern);
 function playSound(name) {
   var audio = new Audio("sounds/" + name + ".mp3");
   audio.play();
